@@ -1,10 +1,10 @@
 Jenkinsfile (Declarative Pipeline)
 pipeline {
-    agent { docker { image 'maven:3.8.4-openjdk-11-slim' } }
+    agent { docker { image 'golang:1.17.5-alpine' } }
     stages {
         stage('build') {
             steps {
-                sh 'echo "Hallo Jenkins!!!" '
+                sh 'go version'
             }
         }
     }
